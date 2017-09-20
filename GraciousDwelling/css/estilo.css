@@ -1,0 +1,165 @@
+body {
+	margin: 0;
+	font-family: "Tahoma", sans-serif;
+}
+
+header {
+	text-align: center;
+	border-bottom: rgb(0,0,0) 3px;
+}
+header img {
+	margin: 10px
+}
+
+
+
+#menu {
+	border-top: 2px solid #000;
+}
+
+
+#menu ul {
+	width: 800px;
+	margin: 10px auto;
+	padding-left: 0;
+}
+#menu li {
+	list-style: none;
+	display: inline;
+	border-right: #000 solid 1px;
+	padding: 2px 50px;
+
+}
+#menu li:last-child {
+	border: none;
+}
+
+#menu li:first-child a {
+	color: #000;
+}
+
+#menu a {
+	color: rgb(210,210,210);
+	text-decoration: none;
+	font-size: 0.9em;
+}
+
+main {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.principal {
+	width: 670px;
+	float: left;
+}
+
+.principal img:first-child {
+	width: inherit;
+
+}
+
+.principal h3 {
+	margin: 0;
+	padding: 5px;
+	background-color: rgb(36,36,36);
+	color: #fff;
+	font-weight: normal;
+	text-align: center;
+}
+
+
+.col2 {
+	width: 330px;
+	height: 220px;
+}
+
+.lateral {
+	width: 320px;
+	float: left;
+}
+
+.lateral div  {
+	background-color: rgb(201,201,201);
+	padding: 20px;
+}
+.lateral h3 {
+	margin: 0;
+	color: #fff;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+.lateral p {
+	color: rgb(54,54,54);
+	line-height: 1.3em;
+	border-bottom: 1px dotted #fff;
+	padding-bottom: 30px;
+}
+.lateral img {
+	width: inherit;
+}
+.read-more {
+	color: #fff;
+	text-decoration: none;
+}
+
+.read-more::after {
+	content: '>';
+	color: #000;
+	float: right;
+}
+.contacts {
+	text-align: center;
+}
+.contacts a {
+	color: #fff;
+	font-size: 1.3em;
+}
+.contacts h4 {
+	border-top: 1px dotted #fff;
+	padding-top: 15px;
+	font-size: 1.2em;
+	margin: 20 0 0;
+}
+footer {
+	clear: left;
+	border-top: 2px solid rgb(54,54,54);
+
+}
+footer ol, ul {
+	padding-left: 0;
+}
+
+footer ul {
+	width: 1000px;
+	margin-top: 10px auto;
+}
+footer ol {
+	display: inline;
+}
+footer li {
+	display: inline;
+}
+
+footer ul li {
+	margin-right: 90px;
+}
+
+footer ol li {
+	border-right: 1px solid #000;
+	margin-left: 0;
+	margin-right: 0;
+	padding-right: 30px;
+}
+footer ol li:last-child {
+	border-right: none;
+}
+.media a {
+	color: #fff;
+	background-color: #000;
+	border-radius: 50%;
+}
+.fa {
+	padding: 3px;
+	width: 10px;
+}
