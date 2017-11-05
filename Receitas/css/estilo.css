@@ -1,0 +1,51 @@
+* {
+	font-family: "Tahoma", "sans-serif";
+}
+
+.receita {
+	/*position: relative;*/
+	height: 700px;
+}
+
+.receita h1 {
+	display: inline;
+	margin-left: 750px;
+	text-align: center;
+	height: 250px;
+}
+.receita img {
+	float: left;
+	height: 385px;
+	width: 620px;
+}
+.receita-descricao {
+	
+	margin-top: 150px;
+	margin-left: 750px;
+	text-align: center;
+	height: 50px;
+	width: 550px;
+}
+.receita ul {
+	clear: left;
+	float: left;
+	display: inline;
+	margin-left: 150px;
+	/*margin-top: 690px;*/
+	width: 250px;
+	height: 120px;
+}
+.receita ol {
+	float: left;
+	display: inline;
+	margin-left: 300px;
+	/*margin-top: 900px;*/
+	width: 250px;
+	height: 120px;
+}
+.receita ul li {
+	width: 634px;
+}
+.receita ol li {
+	width: 634px;
+}
