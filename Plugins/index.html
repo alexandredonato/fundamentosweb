@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./js/pluginTeste.css">
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/pluginTeste.js"></script>
+	<script>
+		$(function () {
+			$("button").click(function(){
+				var frase = $("#frase").val();
+				var options = {"mensagem":frase, "categoria":$("#classe").val()};
+				//ou isso	
+				//options.categoria = $("#classe").val();
+				$("#teste").pluginTeste(options);
+			});
+			$(".teste").pluginTeste({
+				hora_inicio: 8
+				, hora_fim: 22
+				,eventos: [{"nome":"Palestra xpto", "duracao": "120","inicio": "8:30"}
+				,{"nome":"Palestra xpto", "duracao": "20", "inicio": "10:30"}	
+				,{"nome":"Palestra xpto", "duracao": "60", "inicio": "12:30"}	
+				,{"nome":"Palestra xpto", "duracao": "90", "inicio": "15:30"}]
+			})
+		});
+	</script>
+</head>
+<body>
+	<!--
+	<div id="teste">
+		 <div class="mensageiro sucesso">
+			<p>Mensagem qualquer a ser passado para o usuário.</p>
+			<div class="close">&times;</div>
+		</div> 
+		<input type="text" id="frase" placeholder="mensagem">
+		<select id="classe">
+			<option value="sucesso">Sucesso</option>
+			<option value="erro">Erro</option>
+		</select>
+	</div>
+
+	<div class="calendar">
+		<div class="calendar-header">
+			<div>Horário</div>
+			<div>Segunda-feira, 30/10</div>
+		</div>
+		<div class="calendar-body">
+			<div class="calendar-hour">
+				<div>8:00</div>
+				<div>9:00</div>
+				<div>10:00</div>
+			</div>
+			<div class="calendar-grid">
+				<div class="calendar-grid-strip"></div>
+				<div class="calendar-grid-strip"></div>
+				<div class="calendar-grid-strip"></div>	
+			</div>
+		</div>
+	</div>
+-->
+    <div class="teste">
+    	
+    </div> 
+	<br clear="left"/>
+	<button>Testar Plugin</button>
+</body>
+</html>
