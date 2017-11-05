@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://www.botanicapp.com.br/web/streetFighter2/ryu.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<style>
+			body {
+				background: url(./img/background3.jpeg) no-repeat;
+				background-size: 100% 100%;
+				height: 600px;
+				position: relative;
+			}
+			#ringue {
+				position: absolute;
+				bottom: 40px;
+			}
+			.magia {
+				position: absolute;
+				top: 40px;
+				left: 200px;
+				height: 67px; 
+			}
+			.deslocada {
+				
+			}
+			.voadora{
+				width: 544px;
+				height: 268px;
+			}
+			.gancho {
+				width: 300px;
+				height: 350px;
+			}
+		</style>
+		<script src="./js/jquery.min.js"></script>
+		<script>
+			$(function(){
+				var comando1, comando2, comando3 = null;
+				$("#player").hover(function(){
+					$(this).attr("src", "./img/ryu-ginga.gif");
+				});
+				$("#player").mouseleave(function(){
+					$(this).attr("src", "./img/ryu.png");
+				});
+				$("#player").click(function(){
+					
+					
+				});
+
+				$("#ringue").on("mouseenter", ".magia", function(){
+					$(this).addClass("deslocada");
+				})
+				$('body').keypress(function(e){
+                    /* 
+                     * verifica se o evento é Keycode (para IE e outros browsers)
+                     * se não for pega o evento Which (Firefox)
+                    */
+                   var tecla = (e.keyCode?e.keyCode:e.which);
+                   if(comando1==null) {
+						comando1 = tecla;
+                   } else if(comando2 == null) {
+                   		comando2 = tecla;
+                   } else {
+                   		comando3 = tecla;
+                   }
+                   if(comando1&&comando2&&comando3) {
+                   		if(comando1==115 && comando2==100 && comando3 == 13) {
+                   			executaMagia();
+
+                   		}
+                   		if(comando1==115 && comando2==97 && comando3 == 13) {
+                   			executaVoadora();
+
+                   		}
+                   		if(comando1==115 && comando2==119 && comando3 == 13) {
+                   			executarGancho();
+                   		}
+                   		comando1 = null;
+                   		comando2 = null;
+                   		comando3 = null;
+                   }
+                   console.log(tecla);
+
+                });
+			});
+			function executaMagia() {
+				//alert("Hadouken!!!");
+				$("#player").attr("src", "./img/ryu-magia.png");
+					$("#ringue")
+						.append($("<audio />")
+							.addClass("som-magia")
+							.attr("autoplay", "autoplay")
+							.append($("<source />")
+								.attr("src", "./sound/hadouken.mp3")
+							))
+						.append($("<img />")
+							.attr("src", "./img/bola-fogo.gif")
+							.addClass("magia")
+							.animate({
+								"margin-left": "+=5000px"
+							}, 5000, function(){
+								$(this).remove();
+								$("#player").attr("src", "./img/ryu-ginga.gif");
+								$(".som-magia").remove();
+							})
+						);
+
+			}
+			function executaVoadora() {
+				$("#player").addClass("voadora").attr("src", "./img/ryu-tatsumaki-senpuukyaku.gif");
+				$("#ringue").append($("<audio />")
+					.addClass("som-voadora")
+					.attr("autoplay", "autoplay")
+					.append($("<source />")
+						.attr("src", "./sound/ryu-tatsumaki.mp3")
+					));
+				setTimeout(function(){
+					$("#player").removeClass("voadora").attr("src", "./img/ryu.png");
+				}, 2000, function(){
+					$(this).remove();
+					$(".som-voadora").remove();
+				});
+			}
+			function executarGancho() {
+				$("#player").addClass("gancho").attr("src", "./img/ryu-shoryuken.gif");
+				$("#ringue").append($("<audio />")
+					.addClass("som-gancho")
+					.attr("autoplay", "autoplay")
+					.append($("<source />")
+						.attr("src", "./sound/ryu-shoryuken.mp3")
+					));
+				setTimeout(function(){
+					$("#player").removeClass("gancho").attr("src", "./img/ryu.png");
+				}, 1500, function(){
+					$(this).remove();
+					$(".som-gancho").remove();
+				});
+			}
+		</script>
+	</head>
+	<body style="">
+		<audio autoplay="autoplay">
+			<source src="./sound/ryu-musica-fase.mp3">
+		</audio>
+		<div id="ringue">
+			<img src="./ryu_files/ryu.png" id="player">
+		</div>
+	
+</body></html>
