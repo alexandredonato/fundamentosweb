@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+}
+
+.main {
+    display: -webkit-flex;
+    display: inline-flex;
+    width: 1650px;
+    height: 210px;
+}
+.imagem {
+	-webkit-order:1;
+	width: 405px;
+	padding: 5px 20px;
+}
+
+.titulo {
+	-webkit-order:2;
+}
+.titulo h1 {
+	text-align: center;
+}
+.titulo p {
+	text-align: center;
+	padding: 20px;
+}
+.informacoes {
+	display: -webkit-flex;
+    display: inline-flex;
+    width: 1650px;
+    height: 210px;
+}
+.elenco {
+	-webkit-order:1;
+	width: 405px;
+}
+.elenco h2 {
+	text-align: center;
+
+}
+.elenco ul {
+	list-style: none;
+}
+.relacionados {
+	-webkit-order:2;
+	width: 450px;
+	border-left: 1px solid #000;
+}
+.relacionados h2 {
+	text-align: center;
+}
+.relacionados p {
+	padding-left: 20px;
+}
